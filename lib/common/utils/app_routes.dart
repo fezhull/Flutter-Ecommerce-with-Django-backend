@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:test1/src/auth/views/login_screen.dart';
+import 'package:test1/src/categories/views/categories_screen.dart';
+import 'package:test1/src/categories/views/category_page.dart';
 import 'package:test1/src/entrypoint/views/entrypoint.dart';
 import 'package:test1/src/notification/views/notification_screen.dart';
 import 'package:test1/src/onboarding/views/onboarding_screen.dart';
@@ -58,14 +60,14 @@ final GoRouter _router = GoRouter(
 //       path: '/register',
 //       builder: (context, state) => const RegistrationPage(),
 //     ),
-//     GoRoute(
-//       path: '/categories',
-//       builder: (context, state) => const CategoriesPage(),
-//     ),
-//      GoRoute(
-//       path: '/category',
-//       builder: (context, state) => const CategoryPage(),
-//     ),
+    GoRoute(
+      path: '/categories',
+      builder: (context, state) => const CategoriesPage(),
+    ),
+    GoRoute(
+      path: '/category',
+      builder: (context, state) => const CategoryPage(),
+    ),
 
 //     GoRoute(
 //       path: '/addaddress',

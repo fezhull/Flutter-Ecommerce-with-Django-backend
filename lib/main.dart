@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 import 'package:test1/common/utils/app_routes.dart';
 import 'package:test1/common/utils/environment.dart';
 import 'package:test1/common/utils/kstrings.dart';
+import 'package:test1/src/controllers/category_notifier.dart';
 import 'package:test1/src/entrypoint/controllers/bottom_tab_notifier.dart';
 import 'package:test1/src/onboarding/controllers/onboarding_notifier.dart';
 import 'package:test1/src/splahscreen/views/splashscreen_screen.dart';
@@ -21,7 +22,8 @@ void main() async {
   runApp(MultiProvider(
     providers: [
       ChangeNotifierProvider(create: (_) => OnboardingNotifier()),
-      ChangeNotifierProvider(create: (_) => TabIndexNotifier())
+      ChangeNotifierProvider(create: (_) => TabIndexNotifier()),
+      ChangeNotifierProvider(create: (_) => CategoryNotifier())
     ],
     child: const MyApp(),
   ));
